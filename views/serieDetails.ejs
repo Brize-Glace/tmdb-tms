@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/film-details.css" />
+    <link rel="stylesheet" href="/general.css" />
+    <title>Series & TV Shows - <%= serie.title %></title>
+  </head>
+  <body>
+    <div id="film">
+      <nav>
+        <h2>The Movie Search</h2>
+        <ul>
+          <li><a href="/">Popular</a></li>
+          <li><a href="/films">Films</a></li>
+          <li><a href="/series">Series</a></li>
+        </ul>
+      </nav>
+      <div id="headingFilmDetails" style="background-image: url('<%= serie.backdropPath %>');">
+        <img src="<%= serie.posterPath %>" alt="<%= serie.title %>">
+        <div id="headerInfos">
+            <p><%= serie.release_date %></p>
+            <p><%= serie.runtime %> episodes</p>
+            <% if (serie.status === "Ended") { %>
+              <div id="isFinished">
+                <p><%= serie.status %> </p>
+              </div>
+            <% } else { %>
+              <div id="notFinished">
+                <p><%= serie.status %></p>
+              </div>
+            <% } %>
+            <p><%= serie.genres.join(' | ') %></p>
+            <h1><%= serie.title %></h1>
+        </div>
+      </div>
+      <div id="infos">
+        <div id="filmOverview">
+          <h2>Film Overview</h2>
+          <p><%= serie.overview %></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9b6f3a1221.js" crossorigin="anonymous"></script>
+    </body>
+</html>

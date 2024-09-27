@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/film-details.css" />
+    <link rel="stylesheet" href="/general.css" />
+    <title>ALBART V2</title>
+  </head>
+  <body>
+    <div id="film">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/films">Films</a></li>
+          <li><a href="/series">Series</a></li>
+        </ul>
+      </nav>
+      <div id="headingFilmDetails" style="background-image: url('<%= film.backdropPath %>');">
+        <img src="<%= film.posterPath %>" alt="<%= film.title %>">
+        <div id="headerInfos">
+            <p><%= film.release_date %></p>
+            <p><%= film.runtime %> mins</p>
+            <% if (film.status === "Released") { %>
+              <div id="isReleased">
+                <p><%= film.status %> </p>
+              </div>
+            <% } else { %>
+              <div id="notReleased">
+                <p><%= film.status %></p>
+              </div>
+            <% } %>
+            <p><%= film.genres.join(', ') %></p>
+            <h1><%= film.title %></h1>
+        </div>
+      </div>
+      <div id="infos">
+        <div id="filmOverview">
+          <h2>Film Overview</h2>
+          <p><%= film.overview %></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9b6f3a1221.js" crossorigin="anonymous"></script>
+    </body>
+</html>

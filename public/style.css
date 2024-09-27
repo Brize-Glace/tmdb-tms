@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+i{
+    color: #000;
+}
+h1 {
+    padding: 40px 0 40px 20px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row; /* Ensure cards are aligned horizontally */
+}
+
+#card {
+    margin: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#card img {
+    width: 100%;
+    border-radius: 10px; /* Adjusted to match the card's border-radius */
+}
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #fff;
+    caret-color: white;
+}
+input:focus {
+    outline: none;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+button:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: all ease-in-out 0.3s;
+}
+button:hover{
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+button i{
+    color: white;
+}
+#film-title, #film-releaseDate {
+    text-align: center;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
+#card img {
+    transform: rotate(0deg) scale(1);
+    transition: all ease-in-out 0.3s;
+}
+#card img:hover {
+    transform: rotate(3deg) scale(1.05);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+html{
+    background: linear-gradient(to right, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 80%);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 0 100px;
+}
+ul {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-end;
+}
+li {
+    list-style: none;
+    padding-left: 30px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+footer {
+    color: white;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: white;
+    font-weight: bold;
+}
+.selected a{
+    font-weight: bold;
+}
+footer p {
+    font-size: 0.9rem;
+}
+.para {
+    text-align: start;
+    padding: 20px 100px 20px 100px;
+    font-size: 0.8rem;
+    color: rgb(202, 202, 202);
+}
+.copy {
+    font-size: 0.9rem;
+}

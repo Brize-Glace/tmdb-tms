@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #fff;
+}
+html{
+    background: linear-gradient(to right, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 80%);
+}
+#film img{
+    border-radius: 20px;
+}
+#headingFilmDetails {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#headingFilmDetails::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 6%, rgba(0, 0, 0, 0.6) 70%,  rgba(0, 0, 0, 0.0) 100%);
+    z-index: 1;
+}
+
+#headingFilmDetails>* {
+    position: relative;
+    z-index: 2;
+}
+
+#headingFilmDetails img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+}
+/* #headingFilmDetails h1{
+    position: relative;
+    margin-left: 340px;
+} */
+#headingFilmDetails h1 {
+    /* font-size: 40px; */
+    margin-top: 20px;
+}
+#infos {
+    padding: 40px 140px 20px 140px;
+}
+#isReleased p{
+    padding: 0;
+    max-width: fit-content;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    background-color: #00ff0068;
+    padding: 5px !important;
+    border-radius: 5px;
+}
+#notReleased p{
+    max-width: fit-content;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background-color: #ff000047;
+    padding: 5px !important;
+    border-radius: 5px;
+}
+#isFinished p{
+    padding: 0;
+    max-width: fit-content;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    background-color: #00ff0068;
+    padding: 5px !important;
+    border-radius: 5px;
+}
+#notFinished p{
+    padding: 0;
+    max-width: fit-content;
+    color: #ffaa00;
+    border: 1px solid #ffaa00;
+    background-color: #ffaa0075;
+    padding: 5px !important;
+    border-radius: 5px;
+}
+#filmOverview{
+    padding-bottom: 20px;
+}
+#filmOverview h2{
+    padding: 20px 40px 20px 40px;
+    border-bottom: 0.5px solid #ffffff42;
+}
+#filmOverview p{
+    padding: 20px 40px 20px 40px;
+}
+#headerInfos {
+    margin-left: 340px;
+    top: 200px;
+}
+#headerInfos p {
+    padding-right: 40px;
+    margin-bottom: 20px;
+}

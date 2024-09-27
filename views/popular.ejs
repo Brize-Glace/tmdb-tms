@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Films and Series/TV Shows</title>
+    <link rel="stylesheet" href="/general.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <h2>The Movie Search</h2>
+        <ul>
+            <li class="selected"><a href="/">Home</a></li>
+            <li><a href="/films">Films</a></li>
+            <li><a href="/series">Series</a></li>
+        </ul>
+    </nav>
+    <form action="/search" method="GET">
+        <input type="text" name="query" placeholder="Search for a movie..." />
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <form action="/searchSeries" method="GET">
+        <input type="text" name="query" placeholder="Search for a serie/tv show..." />
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    <h1>Popular Films</h1>
+    <div id="cards">
+        <% if (films && films.length > 0) { %>
+            <% films.forEach((film) => { %>
+            <a href="/film/<%= film.id %>">
+                <div id="card">
+                    <img src="<%= film.posterPath %>" alt="<%= film.title %>" />
+                    <div id="film-title"><%= film.title %></div>
+                </div>
+            </a>
+            <% }); %>
+        <% } else { %>
+            <p>No popular films available.</p>
+        <% } %>
+    </div>
+    <div id="PopularSeries">
+        <h1>Popular Series</h1>
+        <div id="cards">
+            <% if (series && series.length > 0) { %>
+                <% series.forEach((serie) => { %>
+                <a href="/serieDetails/<%= serie.id %>">
+                    <div id="card">
+                        <img src="<%= serie.posterPath %>" alt="<%= serie.title %>" />
+                        <div id="film-title"><%= serie.title %></div>
+                    </div>
+                </a>
+                <% }); %>
+            <% } else { %>
+                <p>No popular series available.</p>
+            <% } %>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9b6f3a1221.js" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <p>Made with ❤️ by <a href="https://github.com/Brize-Glace">Romain</a></p>
+    <p class="para">This site uses The Movie Database (TMDB) API to provide movie information and images. Posters, cover art, and other images are the property of their respective owners and are used under license. This site is not affiliated with TMDB and complies with the <a href="https://www.themoviedb.org/api-terms-of-use">TMDB API Terms of Use</a>. This site is not responsible for how users interact with its content, including but not limited to spamming or misuse of the API. Each user is solely responsible for their actions while using the site. Additionally, the site cannot be held liable for any malfunctions or unavailability due to major issues such as technical problems or attacks.</p>
+    <p class="copy">&copy; 2024 The Movie Search - All Rights Reserved</p>
+  </footer>
+</html>
