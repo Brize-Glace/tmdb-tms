@@ -14,7 +14,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', filmRoutes); // This should include the routes
+app.use('/', filmRoutes);
 
 app.set('view engine', 'ejs');
 
