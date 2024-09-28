@@ -20,6 +20,9 @@ li a{
     text-decoration: none;
     color: white;
 }
+a{
+    cursor: pointer;
+}
 footer {
     color: white;
     text-align: center;
